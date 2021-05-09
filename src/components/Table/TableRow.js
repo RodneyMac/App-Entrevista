@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalEdit from '../Modal';
 
 function TableRow(props) {
 
@@ -14,8 +15,9 @@ function TableRow(props) {
             <td>{item.fecha_de_alta}</td>
             <td>{item.domicilio}</td>
             <td>
-                <button className="btn btn-outline-primary"><i className="fas fa-chart-bar"></i></button>
-                <button className="btn btn-outline-primary m-2"><i className="fas fa-pencil-alt"></i></button>
+                <ModalEdit id={item.id}/>
+                <button className="btn btn-outline-primary m-1"><i className="fas fa-chart-bar"></i></button>
+                {/*<button className="btn btn-outline-primary m-2"><i className="fas fa-pencil-alt"></i></button>*/}
                 <button className="btn btn-outline-primary"><i className="fas fa-trash-alt"></i></button>
             </td>
         </tr>   

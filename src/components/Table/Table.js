@@ -1,15 +1,19 @@
 import React from 'react';
-import usuarios from '../../services/database/usuarios.json';
 import TableRow from './TableRow';
+import {useSelector} from 'react-redux';
 
 function Table() {
+
+    const usuarios = useSelector((state) => state);
+
     return(
-        <div className="text-center table-responsive">
+        <div className="text-center">
             <nav className="navbar navbar-dark bg-dark sticky-top">
                 <div className="container-fluid justify-content-center">
                     <a className="navbar-brand" href="#!">Usuarios</a>
                 </div>
             </nav>
+            
             {/*<h3>Usuarios</h3>*/}
                 <table className="table align-middle table-hover justify-content-center">
                     <thead>
@@ -21,6 +25,7 @@ function Table() {
                             <th scope="col">DNI</th>
                             <th scope="col">Alta</th>
                             <th scope="col">Domicilio</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

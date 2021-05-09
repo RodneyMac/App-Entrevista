@@ -6,7 +6,7 @@
 		"email": "david_prieto@gmail.com",
         "dni": "24.806.139",
 		"fecha_de_alta": "07/02/2019",
-		"domicilio": "Apartado núm.: 590, 4212 Arcu "
+		"domicilio": "Apartado núm.: 590, 4212 Arcu"
 	},
 	{
 		"id": 2,
@@ -105,7 +105,7 @@
 		"email": "aguirrecarli@gmail.com",
         "dni": "22.419.094",
 		"fecha_de_alta": "22/02/2021",
-		"domicilio": "Apartado núm.: 443, 4408 Nam "
+		"domicilio": "Apartado núm.: 443, 4408 Nam."
 	},
 	{
 		"id": 13,
@@ -123,7 +123,7 @@
 		"email": "pintosmarcedaniel@gmail.com",
         "dni": "47.549.140",
 		"fecha_de_alta": "19/10/2019",
-		"domicilio": "Apdo.:416-3665 Ornare"
+		"domicilio": "Apdo.:416-3665 Ornare."
 	},
 	{
 		"id": 15,
@@ -177,6 +177,6 @@
 		"email": "lageorgi_miranda@gmail.com",
         "dni": "25.746.581",
 		"fecha_de_alta": "11/01/2021",
-		"domicilio": "118-3121 Mus. C/"
+		"domicilio": "118-3121 Mus. C/ Sosa."
 	}
 ]

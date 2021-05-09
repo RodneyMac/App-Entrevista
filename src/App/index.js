@@ -1,6 +1,4 @@
 import React from 'react';
-import Home from '../components/Home';
-import Log from '../components/Login';
 
 import {
     BrowserRouter as Router,
@@ -8,6 +6,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
+
+import Home from '../components/Home';
+import Log from '../components/Login';
 import Table from '../components/Table/Table';
 import ModalEdit from '../components/Modal';
 
