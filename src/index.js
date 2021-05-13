@@ -5,6 +5,9 @@ import reportWebVitals from './reportWebVitals';
 
 import {Provider} from 'react-redux';
 import storeFN from './redux/Store';
+//import generateStore from './redux/Store';
+
+/*const storeExtension = generateStore()*/
 
 const store = storeFN();
 
