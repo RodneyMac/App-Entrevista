@@ -8,7 +8,7 @@ function Log() {
         password: "123456"
     }
 
-    const [user, setUser] = useState({name: "", email: ""});
+    const [userAdm, setUserAdm] = useState({name: "", email: ""});
     const [error, setError] = useState("");
 
     const Connect = details => {
@@ -16,23 +16,33 @@ function Log() {
 
         if(details.email === adminUser.email && details.password === adminUser.password) {
             console.log("Connected");
-            setUser({
+            setUserAdm({
                 name: details.name,
                 email: details.email
             });
         }else {
             console.log("Details do not match!");
             setError("Details do not match!");
+            alert("Access denied");
+            return {
+                Login
+            }
         }
     }
 
     const Logout = () => {
-        setUser({name: "", email: ""});
+        setUserAdm({name: "", email: ""});
     }
 
     return(
-        <div>
+        <div>{(userAdm.email !== "") ? (
+            <div>
+                <h4>Welcome</h4>
+                <button onClick={Logout}>Logout</button>
+            </div>    
+        ) : (
             <Login Connect={Connect} error={error} />
+        )}
         </div>
     );
 }

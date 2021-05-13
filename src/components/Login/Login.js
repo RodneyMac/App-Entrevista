@@ -10,7 +10,7 @@ function Login({Connect, error}) {
     const handleSubmit = e => {
         e.preventDefault();
         Connect(details);
-        history.push("/home");   
+        history.push("/table");
     }
 
     return(
@@ -21,17 +21,14 @@ function Login({Connect, error}) {
                         <div className="">
                             <h4 className="mb-5 mt-5">Iniciar sesión</h4>
                             {(error !== "") ? (<div>{error}</div>) : ""}
-                            {/*<i className="material-icons left text-primary">person_outline</i>*/}
                             <i className="fas fa-user text-primary d-flex m-2"></i>
-                            <input type="text" className="form-control mb-4 has-validation" placeholder="Usuario" name="email" id="validationCustomUsername" onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
-                            {/*<i className="material-icons text-primary left">lock_outline</i>*/}
+                            <input type="text" className="form-control mb-4 has-validation" placeholder="Usuario" name="email" id="email" onChange={e => setDetails({...details, email: e.target.value})} value={details.email} />
                             <i className="fas fa-lock text-primary d-flex m-2"></i>
                             <input type="password" className="form-control" placeholder="Contraseña" name="password" id="password" onChange={e => setDetails({...details, password: e.target.value})} value={details.password} />
                             <button className="btn btn-primary mt-4 mb-4" value="LOGIN">Enviar</button>
                         </div>
                     </div>
                 </div>
-                {/*<button className="btn btn-primary mt-5" value="LOGIN">Enviar</button>*/}
             </form>
         </div>
     )
