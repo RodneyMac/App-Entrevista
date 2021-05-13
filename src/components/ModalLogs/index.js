@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useSelector, useDispatch} from 'react-redux';
@@ -10,7 +10,7 @@ function ModalLogs(){
 
     const {showModalLogs, selectedUser, listaUsuarios} = useSelector((state) => state);
 
-    const user = listaUsuarios.filter((el) => el.id == selectedUser)
+    const user = listaUsuarios.filter((el) => el.id === selectedUser)
 
    const handleCloseGraphic = () => {
         dispatch({type: "CLOSE_GRAPHIC", payload: {showModal: false}});
@@ -19,12 +19,11 @@ function ModalLogs(){
     return(
         <>
             <Modal show={showModalLogs} size="lg">
-                <Modal.Header>
-                    <Modal.Title><h4>Ver Logs</h4></Modal.Title>
-                </Modal.Header>
+                    <h4 className="text-center pt-4">{user[0].nombre} {user[0].apellido}</h4>
                 <Modal.Body>
-                    {user[0].apellido}
-                    <Graphic user={user[0]}/>
+                    <div className="mt-1 mb-4">
+                        <Graphic user={user[0]}/>
+                    </div>
                 </Modal.Body>
                 <Modal.Footer variant="mb-4">
                     <Button variant="secondary" onClick={handleCloseGraphic}>Cerrar</Button>

@@ -7,7 +7,7 @@ function ModalEdit(props) {
 
     const usuarios = useSelector((state) => state.listaUsuarios);
 
-    const personaSeleccionada = usuarios.find((user) => user.id == props.id);
+    const personaSeleccionada = usuarios.find((user) => user.id === props.id);
 
     const dispatch = useDispatch();
 
